@@ -20,7 +20,7 @@ const SignUp = () => {
                 placeholder="Confirm Password"
                 secureTextEntry
             />
-            <Button title="Sign Up" onPress={() => router.replace('/home')} />
+            <Button title="Sign Up" onPress={() => router.replace('/dashboard')} />
             <Link href="/sign-in" asChild>
                 <TouchableOpacity style={styles.switchButton}>
                     <Text style={styles.switchButtonText}>
