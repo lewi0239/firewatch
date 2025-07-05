@@ -49,7 +49,7 @@ export default function TabLayout() {
         tabBarIcon: ({ color, size, focused }) => {
           let icon;
 
-          const iconWrapper = (iconNode: JSX.Element) => (
+          const iconWrapper = (iconNode: React.ReactNode) => (
             <View style={{ alignItems: 'center' }}>
               {iconNode}
               <AnimatedIndicator focused={focused} />
@@ -82,9 +82,9 @@ export default function TabLayout() {
       })}
     >
       <Tabs.Screen name="dashboard/index" options={{ title: 'Dashboard', headerShown: false }} />
-      <Tabs.Screen name="maps/index" options={{ title: 'Maps' }} />
-      <Tabs.Screen name="my-bag/index" options={{ title: 'My Bag' }} />
-      <Tabs.Screen name="settings/index" options={{ title: 'Settings' }} />
+      <Tabs.Screen name="maps/index" options={{ title: 'Maps', headerShown: false }} />
+      <Tabs.Screen name="my-bag/index" options={{ title: 'My Bag', headerShown: false }} />
+      <Tabs.Screen name="settings/index" options={{ title: 'Settings', headerShown: false }} />
     </Tabs>
   );
 }
