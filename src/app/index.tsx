@@ -1,4 +1,6 @@
-import { StyleSheet, Text, View } from "react-native";
+import { Link } from "expo-router";
+import { Text, View } from "react-native";
+import { pageStyles as styles } from "../theme/styles";
 
 export default function Page() {
     return (
@@ -8,30 +10,10 @@ export default function Page() {
                 <Text style={styles.subtitle}>
                     This is the first page of your app.
                 </Text>
+                <Link href="/sign-in" style={styles.link}>
+                    Go to Sign In
+                </Link>
             </View>
         </View>
     );
 }
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        alignItems: "center",
-        padding: 24,
-    },
-    main: {
-        flex: 1,
-        justifyContent: "center",
-        maxWidth: 960,
-        marginHorizontal: "auto",
-        color: "#FFF",
-    },
-    title: {
-        fontSize: 64,
-        fontWeight: "bold",
-    },
-    subtitle: {
-        fontSize: 36,
-        color: "#FFF",
-    },
-});
